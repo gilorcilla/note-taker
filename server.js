@@ -2,6 +2,8 @@
 const path = "path";
 const fs = require("fs");
 const express = require("express");
+const { parse } = require("path");
+const { notStrictEqual } = require("assert");
 
 // express set-up
 const app = express();
@@ -39,6 +41,8 @@ app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
+// api routing elements
+
 app.get("/api/notes", (req, res) => {
   readNotes();
   res.json(notes);
@@ -56,7 +60,16 @@ app.post("/api/notes", (req, res) => {
   res.json(notes);
 });
 // delete element
+app.delete("/api/notes/:id", (req, res) => {
+  let chosenId = parseInt(req.params.id);
+  let foundNote = notes.find((note) => note.id === chosenId);
 
-// api routing elements
+  notes.splice(notes.indexOf(foundNote), 1);
 
-// html routing elements
+  writeNotes();
+  console.log("Note deleted form db.json");
+
+  fs.readNotes();
+
+  res.json(foundNote);
+});
