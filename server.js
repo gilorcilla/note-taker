@@ -38,7 +38,24 @@ app.get("/", (req, res) => {
 app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
-// delete elements
+
+app.get("/api/notes", (req, res) => {
+  readNotes();
+  res.json(notes);
+});
+
+app.post("/api/notes", (req, res) => {
+  newNote = req.body;
+  id = notes.length + 1;
+  newNote.id = id++;
+  notes.push(newNote);
+
+  writeNotes();
+  console.log("Note written to db.json");
+
+  res.json(notes);
+});
+// delete element
 
 // api routing elements
 
