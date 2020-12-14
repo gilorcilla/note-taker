@@ -19,6 +19,11 @@ var notes = [];
 var id;
 
 // read/write notes elements
+const readNotes = () => {
+  fs.readFile(__dirname + "/db/db.json", (err, res) => {
+    notes = JSON.parse(response);
+  });
+};
 
 // delete elements
 
