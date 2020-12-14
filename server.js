@@ -1,9 +1,7 @@
 // npm packages require to establish server connectivity
-const path = "path";
-const fs = require("fs");
 const express = require("express");
-const { parse } = require("path");
-const { notStrictEqual } = require("assert");
+const fs = require("fs");
+const path = require("path");
 
 // express set-up
 const app = express();
@@ -34,11 +32,11 @@ const writeNotes = () => {
 };
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/assets/index.html"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/assets/notes.html"));
+  res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
 // api routing elements
@@ -69,7 +67,7 @@ app.delete("/api/notes/:id", (req, res) => {
   writeNotes();
   console.log("Note deleted form db.json");
 
-  fs.readNotes();
+  readNotes();
 
   res.json(foundNote);
 });
