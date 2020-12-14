@@ -34,11 +34,11 @@ const writeNotes = () => {
 };
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "/public/assets/index.html"));
 });
 
 app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/notes.html"));
+  res.sendFile(path.join(__dirname, "/public/assets/notes.html"));
 });
 
 // api routing elements
@@ -72,4 +72,8 @@ app.delete("/api/notes/:id", (req, res) => {
   fs.readNotes();
 
   res.json(foundNote);
+});
+
+app.listen(PORT, function () {
+  console.log("Apps is listenting on PORT: " + PORT);
 });
