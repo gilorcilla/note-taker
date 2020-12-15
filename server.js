@@ -48,7 +48,7 @@ app.get("/api/notes", (req, res) => {
 
 app.post("/api/notes", (req, res) => {
   newNote = req.body;
-  id = notes.length + 1;
+  id = Math.floor(Math.random() * 200) + notes.length;
   newNote.id = id++;
   notes.push(newNote);
 

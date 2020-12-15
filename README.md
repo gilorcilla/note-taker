@@ -18,17 +18,17 @@
 
 ### User Story
 
-As a small business owner, a student, or anyone who have a need to jot-down their thoughts would benefit from this application. The benefits would be--allowing you to
+As a small business owner, a student, or anyone who have a need to jot-down their thoughts would benefit from this application. The
 
-retrieve/recall what you have written; as well as add/
-
-improve your thoughts/ideas.
+benefits would be--allowing you to retrieve/recall what you have written; as well as add/improve your thoughts/ideas.
 
 ### Description
 
 The note-taking application allows you to save and delete your notes as you needed it. As long as you are connected to the web or WIFI.
 
 ### Installation
+
+npm packages
 
 ### Testing
 
@@ -52,4 +52,10 @@ THEN I am presented with empty fields to enter a new note title and the note's t
 
 ### Deployed Site
 
+https://nameless-atoll-11682.herokuapp.com/notes
+
 ### Questions
+
+For questions please email me at:
+
+mathnasiumcos@gmail.com
