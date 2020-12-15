@@ -18,13 +18,17 @@
 
 ### User Story
 
-As a small business owner, a student, or anyone who have a need to jot-down their thoughts would benefit from this application. The
+As a small business owner, a student, or anyone who have a need to jot-down their
 
-benefits would be--allowing you to retrieve/recall what you have written; as well as add/improve your thoughts/ideas.
+thoughts would benefit from this application. The benefits would be--allowing you to retrieve/recall what you have
+
+written; as well as add/improve your thoughts/ideas.
 
 ### Description
 
-The note-taking application allows you to save and delete your notes as you needed it. As long as you are connected to the web or WIFI.
+The note-taking application allows you to save and delete your notes as you needed it. As long as you are connected
+
+to the internet or WIFI.
 
 ### Installation
 
